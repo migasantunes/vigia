@@ -1,0 +1,10 @@
+# M1 single-frame tile classifier. Keys below `kind` are vigia.models.single_frame.SingleFrameConfig.
+model:
+  kind: single_frame
+  backbone: resnet34                       # timm name; ResNet34 matches the paper's single-frame row
+  pretrained: true
+  tile_size: 224
+  tile_overlap: 20
+  pooling: max                             # max | mean | attention
+  tile_loss_weight: 1.0
+  image_loss_weight: 1.0

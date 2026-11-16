@@ -1,0 +1,14 @@
+# Evaluation settings, docs/EVALUATION.md. Every value marked PLACEHOLDER is chosen on
+# validation data and frozen before the test set is used.
+eval:
+  policy:                                  # vigia.eval.alerting.AlertConfig
+    threshold: 0.5                         # PLACEHOLDER: swept by the operating curve, frozen on validation
+    k: 1                                   # PLACEHOLDER: alert when k of the last n frames are hot
+    n: 1                                   # PLACEHOLDER
+    cooldown_s: 600.0                      # PLACEHOLDER: suppress alerts for this long after one fires
+  max_gap_s: 180                           # cap on a gap counted as negative exposure (EVALUATION.md §4)
+  false_alarm_budget_per_camera_day: 1.0   # PLACEHOLDER: headline budget, chosen on validation in Phase 3
+  bootstrap:
+    n_resamples: 1000
+    confidence: 0.95
+    seed: 0

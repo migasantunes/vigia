@@ -1,0 +1,14 @@
+# M2 spatiotemporal tile model. Keys below `kind` are vigia.models.temporal.TemporalConfig.
+model:
+  kind: temporal
+  backbone: resnet34
+  pretrained: true
+  tile_size: 224
+  tile_overlap: 20
+  pooling: max                             # used only when spatial is none
+  context_frames: 2                        # T; ablated over {1, 2, 4} in Phase 4
+  temporal: gru                            # gru | transformer | difference
+  hidden_size: 256
+  spatial: transformer                     # none | transformer
+  tile_loss_weight: 1.0
+  image_loss_weight: 1.0

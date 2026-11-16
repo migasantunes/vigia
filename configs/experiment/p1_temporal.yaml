@@ -1,0 +1,20 @@
+# Protocol P1 (official FIgLib split), model M2 (temporal).
+defaults:
+  - ../data/figlib.yaml
+  - ../model/temporal.yaml
+  - ../eval/default.yaml
+
+experiment:
+  name: p1_temporal
+  output_dir: runs/p1_temporal                 # git-ignored
+
+train:
+  seed: 0
+  epochs: 20                               # starting point, not tuned
+  batch_size: 8                            # frames (or clips) per step
+  optimizer: adamw
+  lr: 0.0001                               # starting point, not tuned
+  weight_decay: 0.01
+  # Checkpoint selection, on validation only (never test):
+  selection_metric: ttd_mean_penalised     # at eval.false_alarm_budget_per_camera_day
+  selection_mode: min
