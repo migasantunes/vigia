@@ -90,6 +90,11 @@ src/vigia/
 tests/        mirrors src/vigia
 ```
 
+## Licence
+
+Code: Apache-2.0, see [`LICENSE`](LICENSE). Datasets keep their own terms and are not
+redistributed here; see [`docs/DATA.md`](docs/DATA.md).
+
 ## References
 
 - Dewangan et al., *FIgLib & SmokeyNet: Dataset and Deep Learning Model for Real-Time

@@ -1,0 +1,10 @@
+# Pyro-SDIS (cross-continent test, protocol P3). Facts and open questions: docs/DATA.md.
+data:
+  dataset: pyrosdis
+  hf_repo: pyronear/pyro-sdis
+  root: data/raw/pyrosdis                  # local copy / HF cache, git-ignored
+  manifest: data/manifests/pyrosdis.parquet
+  frame_cache: data/cache/pyrosdis
+  frame_size: null                         # same working resolution as the FIgLib cache
+  split:
+    protocol: P3                           # all of Pyro-SDIS is test data; the card's split is not used

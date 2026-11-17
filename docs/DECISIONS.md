@@ -51,10 +51,15 @@ paper's datasets, and early smoke is smaller still (measure it on FIgLib in Phas
 the whole frame to a classifier's input size erases it. Models see overlapping
 224-pixel tiles and aggregate, as SmokeyNet does; the exact grid is a config value.
 
+## D8. The code is licensed Apache-2.0
+
+Chosen over MIT for two reasons: it carries an explicit patent grant, and it matches the
+licence used by Pyronear's code and the Pyro-SDIS dataset, which keeps a future
+contribution upstream simple. The licence covers this repository's code only. Datasets
+keep their own terms (see `DATA.md`) and are never redistributed here.
+
 ## Open decisions (owner's call)
 
-- **Repository licence.** None added yet. MIT or Apache-2.0 are the usual choices for a
-  portfolio project; pick one before sharing the repo widely.
 - **Experiment tracker.** MLflow is assumed (local, no account). Weights & Biases is a
   drop-in alternative if a hosted dashboard is preferred.
 - **Working resolution.** Default is the paper's 1040 × 1856 crop. Revisit after the

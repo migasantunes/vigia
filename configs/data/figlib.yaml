@@ -1,0 +1,12 @@
+# FIgLib (primary benchmark). Facts and open questions: docs/DATA.md.
+data:
+  dataset: figlib
+  root: data/raw/figlib                    # download location, git-ignored
+  manifest: data/manifests/figlib.parquet
+  frame_cache: data/cache/figlib
+  frame_size: null                         # [height, width] of the cache; chosen in Phase 0 (PLAN task 4)
+  split:
+    protocol: P1                           # official fire lists, see docs/EVALUATION.md §7
+    official_lists: data/raw/figlib/splits # where the published lists live is to verify in Phase 0
+    key: sequence_id
+  audit_keys: [camera_id, station_id]

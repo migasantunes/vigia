@@ -9,11 +9,12 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-# data, caches and run outputs never go in git
-data/
-runs/
-mlruns/
-outputs/
+# data, caches and run outputs never go in git.
+# Anchored to the repo root: a bare `data/` would also ignore src/vigia/data.
+/data/
+/runs/
+/mlruns/
+/outputs/
 *.onnx
 *.pt
 *.ckpt
